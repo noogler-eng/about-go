@@ -30,6 +30,7 @@ func main() {
 
 	// function name should be
 	r.GET("/get-books", controllers.GetBooks)
+	r.POST("/add-books", )
 
 	r.Run(":8080") 
 }
