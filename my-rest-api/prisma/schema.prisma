@@ -1,0 +1,16 @@
+// go get github.com/steebchen/prisma-client-go
+
+generator client {
+  provider = "prisma-client-go"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Book {
+  id      String @id @default(uuid()) @unique
+  title   String
+  author  String
+}
